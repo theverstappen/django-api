@@ -25,7 +25,7 @@ SECRET_KEY = 'r-8$v=9#0l_hu*=ttd_2sxfjgm%3tdnoa55wf!kz7p7gdfxdc_'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','localhost']
+ALLOWED_HOSTS = ['127.0.0.1','localhost', 'http://ec2-3-121-196-147.eu-central-1.compute.amazonaws.com/']
 
 
 # Application definition
@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'blog'
+    'blog',
+    'lab'
 ]
 
 MIDDLEWARE = [
@@ -121,3 +122,6 @@ USE_TZ = True
 
 STATIC_ROOT = os.path.join(BASE_DIR, "..", "www", "static")
 STATIC_URL = '/static/'
+
+MEDIA_ROOT = os.path.join(BASE_DIR, '..','www','media')
+MEDIA_URL = '/media/'
